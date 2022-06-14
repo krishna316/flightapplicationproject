@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body {
+	background: #85C1E9;
+	font-family: arial;
+}
+
+h1 {
+	color : black;
+	text-align: center;
+}
+
+
+
+td {
+	padding: 5px;
+	margin: 5px;
+}
+
+input[type=submit] {
+	background-color: rgb(37, 117, 253);
+	color: white;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 5px;
+	font-size: 15px;
+}
+</style>
+</head>
+<body>
+	<h1>Sign Up</h1>
+	<form action="#" th:action="@{/signup}" method=post th:object="${passenger}">
+		<table align=center>
+			<tr>
+				<th>UserName:
+				<td><input type=text name=name placeholder="user name">
+				</td>
+			</tr>
+			<tr>
+				<th>Email Id
+				<td><input type=text name=email placeholder="email id">
+				</td>
+			</tr>
+			
+			<tr>
+				<th>Address
+				<td><input type=text name=address placeholder="address">
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<th>Gender :</th>
+				<td>Male : <input type="radio" name="gender" value="male">
+					Female : <input type="radio" name="gender" value="female">
+					Other:<input type="radio" name="gender" value="other">
+				</td>
+			</tr>
+			<tr>
+				<th>Age :</th>
+				<td><input type=text name=age placeholder="age">
+				</td>
+			</tr>
+			<tr>
+				<th>Phone No :</th>
+				<td><input type=text name=phone placeholder="phone no"></td>
+			</tr>
+			<tr>
+
+				<th>Password :</th>
+
+				<td><input type=password name=pass placeholder="Only 4 Digit">
+				</td>
+			</tr>
+			
+			<th>Confirm Password :</th>
+
+				<td><input type=confirm password name=pass placeholder="Only 4 Digit">
+				</td>
+			</tr>
+
+			<th>
+			<td><button type="submit">SignUp</button></td>
+			
+			<th>
+		</table>
+	</form>
+</body>
+</html>

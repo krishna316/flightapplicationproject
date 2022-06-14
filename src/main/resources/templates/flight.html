@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmnls:th="http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#"th:action="@{/flightRegister}" method="post" th:object="${flightObj}">
+<label>UserName:</label>
+<input type="text" th:field="*{flightname}"><br>
+<label>Status:</label>
+<input type="text" th:field="*{flightstatus}"><br>
+<label>Capacity:</label>
+<input type="text" th:field="*{flightcapacity}"><br>
+
+<button type="submit">DoRegistration</button>
+</form>
+</body>
+</html>

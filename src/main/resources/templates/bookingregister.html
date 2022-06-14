@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmnls:th="http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#"th:action="@{/bookingRegister}" method="post" th:object="${bookingObj}">
+<label>StartingLocation:</label>
+<input type="text" th:field="*{startinglocation}"><br>
+<label>Destination:</label>
+<input type="text" th:field="*{destination}"><br>
+<label>Datetime:</label>
+<input type="text" th:field="*{datetime}"><br>
+<label>Price:</label>
+<button type="submit">DoRegistration</button>
+</form>
+</body>
+</html>

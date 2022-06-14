@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Flight Ticket Booking System</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="booking-form-box">
+		<div class="radio-btn">
+			<input type="radio" class="btn" name="check" checked="checked"><span>Roundtrip</span>
+			<input type="radio" class="btn" name="check"><span>One
+				way</span> <input type="radio" class="btn" name="check"><span>Multi-city</span>
+		</div>
+		<div class="booking-form">
+			<label><h4>Starting Location</h4></label> <input type="text"
+				class="form-control" placeholder="city or Airport"> <label><h4>Destination</h4></label>
+			<input type="text" class="form-control" placeholder="city or Airport">
+
+			<div class="input-grp">
+				<label><h4>Departing</h4></label> <input type="date"
+					class="form-control select-date">
+			</div>
+
+			<div class="input-grp">
+				<label><h4>Return</h4></label> <input type="date"
+					class="form-control select-date">
+			</div>
+
+			<div class="input-grp'">
+				<label><h4>Adults</h4></label> <input type="number"
+					class="form-control" value="1">
+			</div>
+
+			<div class="input-grp">
+				<label><h4>children</h4></label> <input type="number"
+					class="form-control" value="1">
+			</div>
+
+			<div class="input-grp">
+				<label><h4>Pay in</h4></label> <select class="custom-select">
+					<option value="1">Indian Rupess</option>
+					<option value="0">Us Dollars</option>
+					<option value="0">Thailand Baht</option>
+					<option value="0">UAE Dirham</option>
+					<option value="0">Nepalese Rupee</option>
+					<option value="0">Euro</option>
+				</select>
+			</div>
+			</br>
+			<div class="input-grp">
+				<label><h4>Travel class</h4></label> <select class="custom-select">
+					<option value="1">Economy class</option>
+					<option value="0">Business class</option>
+				</select>
+			</div>
+			</br>
+			<div class="input-grp1">
+			<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-3"><button type="button" class="btn btn-primary flight">Search
+							Flight</button></div>
+			<div class="col-md-3"><button type="button" class="btn btn-primary flight">Book
+					Flight</button></div>
+			<div class="col-md-3"></div>
+			</div>
+			
+				
+				
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+</body>
+</html>

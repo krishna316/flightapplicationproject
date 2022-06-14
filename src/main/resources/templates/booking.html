@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/master-page}">
+<head>
+<meta charset="UTF-8">
+<title>Flight Ticket Booking System</title>
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style type="text/css">
+body {
+	background-image: linear-gradient(red, blue);
+	background-size: cover;
+	background-position: center;
+}
+
+.booking-form-box {
+	max-width: 600px;
+	border: 5px solid #ced4da;
+	margin: 10% auto 10%;
+}
+
+.radio-btn {
+	margin: 0 20px;
+}
+
+.radio-btn .btn {
+	margin: 20px 10px 20px 0;
+	box-shadow: none;
+}
+
+.radio-btn .btn::after {
+	content: '';
+	height: 15px;
+	width: 15px;
+	top: -2px;
+	left: -1px;
+	background-color: #fff;
+	position: relative;
+	display: inline-block;
+	border: 3px solid #fff;
+	visibility: visible;
+	border-radius: 50%;
+}
+
+.radio-btn .btn:checked::after {
+	content: '';
+	background-color: #000;
+	transition: 0.5s;
+}
+
+.radio-btn span {
+	color: #fff;
+	margin-right: 5px;
+	font-size: 12px;
+}
+
+.booking-form {
+	padding: 0 20px 20px;
+}
+
+.booking-form label {
+	margin-bottom: 5px;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #fff !important;
+}
+
+input::placeholder {
+	color: #fff !important;
+}
+
+.input-grp {
+	width: 151px;
+	display: inline-block;
+}
+
+.form-control {
+	font-size: 12px !important;
+	border-radius: 0 !important;
+	color: #fff !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+.select-date::-webkit-inner-spin-button, .select-date::-webkit-outer-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.select-date::-webkit-calender-picker-indicator {
+	background: transparent !important;
+}
+
+.custom-select {
+	color: #fff !important;
+	font-size: 12px !important;
+	border: 1px solid #ced4da !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	background: transparent !important;
+}
+
+.custom-select option {
+	color: #333;
+}
+
+.flight {
+	width: 100%;
+	padding: 9px 0;
+	font-size: 12px;
+	border: 1px solid #ced4da !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+}
+
+.flight:hover {
+	background: #fff !important;
+	color: #000 !important;
+	transition: 0.5s;
+}
+
+.input-grp1 {
+	margin-top: 1vh;
+}
+
+.input-grp1 .btn {
+	width: 15vh;
+}
+</style>
+</head>
+<body>
+	<div class="booking-form-box">
+		<div class="radio-btn">
+			<input type="radio" class="btn" name="check" checked="checked"><span>Roundtrip</span>
+			<input type="radio" class="btn" name="check"><span>One
+				way</span> <input type="radio" class="btn" name="check"><span>Multi-city</span>
+		</div>
+		<div class="booking-form">
+			<label><h4>Starting Location</h4></label> <input type="text"
+				class="form-control" placeholder="city or Airport"> <label><h4>Destination</h4></label>
+			<input type="text" class="form-control" placeholder="city or Airport">
+
+			<div class="input-grp">
+				<label><h4>Departing</h4></label> <input type="date"
+					class="form-control select-date">
+			</div>
+
+			<div class="input-grp">
+				<label><h4>Return</h4></label> <input type="date"
+					class="form-control select-date">
+			</div>
+
+			<div class="input-grp'">
+				<label><h4>Adults</h4></label> <input type="number"
+					class="form-control" value="1">
+			</div>
+
+			<div class="input-grp">
+				<label><h4>children</h4></label> <input type="number"
+					class="form-control" value="1">
+			</div>
+
+			<div class="input-grp">
+				<label><h4>Pay in</h4></label> <select class="custom-select">
+					<option value="1">Indian Rupess</option>
+					<option value="0">Us Dollars</option>
+					<option value="0">Thailand Baht</option>
+					<option value="0">UAE Dirham</option>
+					<option value="0">Nepalese Rupee</option>
+					<option value="0">Euro</option>
+				</select>
+			</div>
+			</br>
+			<div class="input-grp">
+				<label><h4>Travel class</h4></label> <select class="custom-select">
+					<option value="1">Economy class</option>
+					<option value="0">Business class</option>
+				</select>
+			</div>
+			</br>
+			<div class="input-grp1">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3">
+						<button type="button" class="btn btn-primary flight">Search
+							Flight</button>
+					</div>
+					<div class="col-md-3">
+						<button type="button" class="btn btn-primary flight">Book
+							Flight</button>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+</body>
+</html>

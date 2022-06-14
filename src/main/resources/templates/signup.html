@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/master-page}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body {
+	background: #85C1E9;
+	font-family: arial;
+}
+
+h1 {
+	color: black;
+	text-align: center;
+}
+
+td {
+	padding: 5px;
+	margin: 5px;
+}
+
+input[type=submit] {
+	background-color: rgb(37, 117, 253);
+	color: white;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 5px;
+	font-size: 15px;
+}
+</style>
+</head>
+<body>
+	<h1>Sign Up</h1>
+	<form method=post action="user/new">
+		<table align=center border=1>
+			<tr>
+				<th>User Id :
+				<td>User Id Auto Generated
+			</tr>
+			<tr>
+				<th>First Name : <i>*</i>
+				<td><input type="text" name=firstname
+					placeholder="Enter your FirstName" required>
+			</tr>
+			<tr>
+				<th>Middle Name : <i>*</i>
+				<td><input type=text name=middlename
+					placeholder="Enter your MiddleName" required>
+			</tr>
+			<tr>
+				<th>Last Name : <i>*</i>
+				<td><input type=text name=lastname
+					placeholder="Enter your LastName" required>
+			</tr>
+			<tr>
+				<th>User Name : <i>*</i>
+				<td><input type=text name=username
+					placeholder="Enter your FullName" required>
+			</tr>
+			<tr>
+				<th>Email : <i>*</i>
+				<td><input type=email name=email placeholder="Enter your Email"
+					required>
+			</tr>
+			<tr>
+				<th>Number : <i>*</i>
+				<td><input type=text name=number
+					placeholder="Enter your Phone Number" required>
+			</tr>
+			<tr>
+				<th>Password : <i>*</i>
+				<td><input type=password name=password
+					placeholder="Enter your Password" required>
+			</tr>
+			<tr>
+				<td colspan=2 align=center><input type=submit value=Register>
+		</table>
+
+		<p align=center>
+			<input type="checkbox" required>I do hereby declare that all
+			the above information given by me are true to the best of my
+			knowledge and belief.
+	</form>
+	<p>&nbsp;
+</body>
+</html>
